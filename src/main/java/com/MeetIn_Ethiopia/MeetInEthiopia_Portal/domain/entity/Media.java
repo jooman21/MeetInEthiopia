@@ -3,12 +3,13 @@ package com.MeetIn_Ethiopia.MeetInEthiopia_Portal.domain.entity;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 public class Media {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
     private String mediaOutlet; // E.g., BBC, CNN, Al Jazeera
     private String mediaType;   // E.g., Journalist, Photographer, Cameraperson

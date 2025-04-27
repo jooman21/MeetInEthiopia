@@ -3,12 +3,13 @@ package com.MeetIn_Ethiopia.MeetInEthiopia_Portal.domain.entity;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 public class CustomsClearance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
     private String itemDescription;
     private int quantity;

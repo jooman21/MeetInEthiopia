@@ -1,18 +1,16 @@
 
 server:
-  port: 8095
+  port: 8091
 
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/e_ticketing
+    url: jdbc:postgresql://localhost:5432/MeetInEthiopia
     username: postgres
     password: admin
     driver-class-name: org.postgresql.Driver
 
   jpa:
-    hibernate:
-      ddl-auto: update
     show-sql: true
     properties:
       hibernate:

@@ -7,12 +7,13 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 public class Accommodation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
     @Enumerated(EnumType.STRING)
     private PreferredHotelType preferredHotelType;
     private LocalDate checkIn;

@@ -10,6 +10,8 @@ import com.MeetIn_Ethiopia.MeetInEthiopia_Portal.exception.RegistrationFieldsMut
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
+
 @Service
 @RequiredArgsConstructor
 public class participantServiceImpl implements ParticipantService {
@@ -55,9 +57,9 @@ public class participantServiceImpl implements ParticipantService {
         if (dto.getParticipantCategory() == null) {
             throw new RegistrationFieldsMutNotBeNull("Participant category must not be null.");
         }
-       if(dto.getAccessibilityNeeds() == null){
-           throw new RegistrationFieldsMutNotBeNull ("Participant AccessibilityNeeds must not be null");
-       }
+        if (dto.getAccessibilityNeeds() == null ){
+            throw new RegistrationFieldsMutNotBeNull("Invalid value for accessibility needs");
+        }
         if(dto.getEmergencyContact() == null){
             throw new RegistrationFieldsMutNotBeNull ("Participant Emergency Contact must not be null");
         }

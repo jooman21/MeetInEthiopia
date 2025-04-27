@@ -4,12 +4,13 @@ import com.MeetIn_Ethiopia.MeetInEthiopia_Portal.domain.valueobject.ParticipantC
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 public class EventAccreditation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
 
     private ParticipantCategory participantCategory; // VIP, Delegate, Media
