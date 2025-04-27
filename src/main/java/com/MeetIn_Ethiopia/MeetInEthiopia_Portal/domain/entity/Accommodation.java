@@ -6,6 +6,7 @@ import com.MeetIn_Ethiopia.MeetInEthiopia_Portal.domain.valueobject.SpecialReque
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 public class Accommodation {
@@ -23,4 +24,6 @@ public class Accommodation {
     @OneToOne
     @JoinColumn(name = "participant_id")
     private Participant participant;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }

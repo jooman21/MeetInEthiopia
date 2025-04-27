@@ -2,6 +2,8 @@ package com.MeetIn_Ethiopia.MeetInEthiopia_Portal.domain.entity;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 public class Media {
     @Id
@@ -21,5 +23,7 @@ public class Media {
 
     @OneToOne(mappedBy = "media", cascade = CascadeType.ALL)
     private MediaEquipmentClearance mediaEquipmentClearance;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }
 

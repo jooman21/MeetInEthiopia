@@ -2,6 +2,8 @@ package com.MeetIn_Ethiopia.MeetInEthiopia_Portal.domain.entity;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 public class PostEventActivity {
     @Id
@@ -16,4 +18,7 @@ public class PostEventActivity {
     @OneToOne
     @JoinColumn(name = "participant_id")
     private Participant participant;
+
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }

@@ -13,6 +13,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class ParticipantRegistrationDTO {
+    private Long id;
     private String fullName;
     private Position_Title positionTitle;
     private String organization;

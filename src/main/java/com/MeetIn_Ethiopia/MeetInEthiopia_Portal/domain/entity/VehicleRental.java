@@ -5,6 +5,7 @@ import com.MeetIn_Ethiopia.MeetInEthiopia_Portal.domain.valueobject.DriverRequir
 import com.MeetIn_Ethiopia.MeetInEthiopia_Portal.domain.valueobject.TypeOfVehicle;
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,4 +25,7 @@ public class VehicleRental {
     @OneToOne
     @JoinColumn(name = "participant_id")
     private Participant participant;
+
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }

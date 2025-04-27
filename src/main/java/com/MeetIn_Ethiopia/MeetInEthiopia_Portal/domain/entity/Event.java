@@ -19,5 +19,7 @@ public class Event {
     private LocalDateTime startDate;
 
     private LocalDateTime endDate;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
 }

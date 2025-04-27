@@ -6,10 +6,17 @@ import com.MeetIn_Ethiopia.MeetInEthiopia_Portal.domain.valueobject.ParticipantC
 import com.MeetIn_Ethiopia.MeetInEthiopia_Portal.domain.valueobject.Emergency_Contact;
 import com.MeetIn_Ethiopia.MeetInEthiopia_Portal.domain.valueobject.Position_Title;
 import jakarta.persistence.*;
+import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Participant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +34,6 @@ public class Participant {
     private Emergency_Contact emergency_contact;
     @Enumerated(EnumType.STRING)
     private ParticipantCategory participantCategory;
-    private String dietaryRestrictions;
     @Enumerated(EnumType.STRING)
     private AccessibilityNeeds accessibilityNeeds;
 
@@ -69,4 +75,7 @@ public class Participant {
 
     @OneToOne(mappedBy = "participant", cascade = CascadeType.ALL)
     private Media media;
+
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }

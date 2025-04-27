@@ -18,5 +18,7 @@ public class Itinerary {
 
     @ManyToOne
     private VehicleRental vehicleRental; // or Participant, depending on your model
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }
 

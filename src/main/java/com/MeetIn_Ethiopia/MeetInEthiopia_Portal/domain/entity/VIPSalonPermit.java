@@ -21,5 +21,8 @@ public class VIPSalonPermit {
     @OneToOne
     @JoinColumn(name = "participant_id")
     private Participant participant;
+
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }
 
